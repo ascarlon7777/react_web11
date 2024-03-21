@@ -31,7 +31,7 @@ const Navi = () => {
           <Link to="#">메뉴-3</Link>
         </li>
         <li>
-          <Link to="#">메뉴-4</Link>
+          <Link to="/customer/main">고객센터</Link>
         </li>
       </ul>
     </nav>
