@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button1, Button3, Input } from "../../component/FormFrm";
+import { Button1, Button3, Button_kakao, Input } from "../../component/FormFrm";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -31,6 +31,30 @@ const Login = (props) => {
   const join = () => {
     navigate("/join");
   };
+
+  const kakaoLogin = () => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://developers.kakao.com/sdk/js/kakao.js";
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      window.Kakao.init("ddeb625775a0919685ee69a92e0fd14c");
+      window.Kakao.Auth.login({
+        scope: "account_email",
+        success: function (authObj) {
+          console.log(authObj);
+          window.Kakao.API.request({
+            url: "/v2/user/me",
+            success: (res) => {
+              const kakao_account = res.kakao_account;
+              console.log(kakao_account);
+            },
+          });
+        },
+      });
+    };
+  };
   return (
     <div className="login-wrap">
       <div className="page-title">로그인</div>
@@ -56,6 +80,9 @@ const Login = (props) => {
         <Link to="#">아이디 찾기</Link>
         <span className="material-icons">horizontal_rule</span>
         <Link to="#">비밀번호 찾기</Link>
+      </div>
+      <div className="login-btn-box">
+        <Button_kakao clickEvent={kakaoLogin} />
       </div>
       <div className="login-btn-box">
         <Button1 text="로그인" clickEvent={login} />

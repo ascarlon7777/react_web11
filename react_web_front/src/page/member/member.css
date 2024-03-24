@@ -51,6 +51,7 @@
 .join-btn-box {
   padding: 30px 0px;
 }
+
 /*로그인*/
 .login-wrap {
   width: 400px;
@@ -168,7 +169,7 @@
 }
 
 /*채팅 css*/
-.chat-message-area{
+.chat-message-area {
   height: 500px;
   background-image: url(/public/image/bg-1.jpg);
   background-repeat: no-repeat;
@@ -179,7 +180,7 @@
   overflow-y: auto;
 }
 
-.chat-input-box{
+.chat-input-box {
   box-sizing: border-box;
   display: flex;
   height: 80px;
@@ -197,40 +198,40 @@
   padding: 10px;
 }
 
-.send-btn{
+.send-btn {
   width: 15%;
   font-size: 15px;
 }
 
-.send-btn:disabled{
+.send-btn:disabled {
   background-color: #eee;
 }
 
-.send-btn:enabled{
+.send-btn:enabled {
   background-color: #1e1e1e;
   color: #fff;
   cursor: pointer;
 }
 
-.chat{
+.chat {
   max-width: 500px;
   position: relative;
   padding: 10px;
 }
 
-.chat.left{
+.chat.left {
   align-self: flex-start;
 }
 
-.chat.right{
+.chat.right {
   align-self: flex-end;
 }
 
-.user{
+.user {
   display: flex;
 }
 
-.user > span{
+.user > span {
   margin: 0px 3px;
 }
 
@@ -238,26 +239,26 @@
   flex-direction: row-reverse;
 }
 
-.chatting-message{
-  background-color: #FEE500;
+.chatting-message {
+  background-color: #fee500;
   padding: 7px;
   border-radius: 5px;
 }
 
-.left > .chatting-message{
+.left > .chatting-message {
   background-color: #fff;
   margin-left: 20px;
 }
 
-.right > .chatting-message{
+.right > .chatting-message {
   margin-right: 20px;
 }
 
-.info{
+.info {
   align-self: center;
 }
 
-.info > span{
+.info > span {
   font-size: 1.1em;
   font-family: ns-b;
 }

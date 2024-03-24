@@ -35,3 +35,10 @@
 .st3 {
   background-color: #67c6e3;
 }
+
+.kakao {
+  background-image: url(/public/image/kakao_login_large_wide.png);
+  background-size: contain;
+  width: 300px;
+  height: 45px;
+}

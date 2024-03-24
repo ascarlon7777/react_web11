@@ -51,4 +51,14 @@ const Button3 = (props) => {
   );
 };
 
-export { Input, Button1, Button2, Button3 };
+const Button_kakao = (props) => {
+  const text = props.text;
+  const clickEvent = props.clickEvent;
+  return (
+    <button className="btn kakao" type="button" onClick={clickEvent}>
+      {text}
+    </button>
+  );
+};
+
+export { Input, Button1, Button2, Button3, Button_kakao };
